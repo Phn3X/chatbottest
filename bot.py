@@ -7,7 +7,7 @@ from pymessenger.bot import Bot
 
 
 app= Flask(__name__)
-ACCESS_TOKEN= 'EAAFxSZCHMvkEBAJbWz7FYejFZAOtUDAv3AJfLmBBoHUI4v2fgWGriznSPrFGXDZASuq2jFQU7W5Jv1KNfb6PDJH5fXIb62snu6ZCGCyf0SRZBpT8FcYrwAnCVhTXpo6SJLotOGhOJKMxoymfvJSffBFQAvkr0cxPuUSGCCRAVygZDZD'
+ACCESS_TOKEN= 'EAAFxSZCHMvkEBAJ9D6KAYpkOELNZBfzxweLZAgAfoI0yYDrNeEVoU2pbXnvEydjgmVI915JmDqgyWR8uk98EWifYZAeZB7zX8mVkFmLYmjT9dCuVA1bIUcmpMCckew7eE7VeDZBlUQgZAbwctZCwur8QxmvLnynGZAPZAdrjDN4Ske2AZDZD'
 VERIFY_TOKEN= '1123qwe13qdwrq3452435'
 bot= Bot(ACCESS_TOKEN)
 
@@ -48,13 +48,10 @@ def get_message():
             if message.get('message'):
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
                 replies = {"hi":["hello! and welcome to bad rabbit! how can I help you?"],"services":["we offer a range of services, including (but not limited to) content ideation, social media management, app development!"],"contact":["if you'd like to keep in touch, feel free to contact us on facebook or at 473-0570!"]}
-
-
                 for item in split:
                     if item in replies:
                         reply_text=random.choice(replies[item])
                         print(split)
-                        time.sleep(5)
                         return(reply_text)
                     elif item in replies1:
                         reply_text1=random.choice(replies1[item])
