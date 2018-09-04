@@ -47,8 +47,7 @@ def get_message():
         for message in messaging:
             if message.get('message'):
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
-                replies = {"hi":["hello! and welcome to bad rabbit! how can I help you?"],
-                "services":["we offer writing services, content ideation and app development! "],"opening hours":["we're open 24/7 so feel free to drop a line!"]}
+                replies = {"hi":["hello! and welcome to bad rabbit! how can I help you?"],"services":["we offer a range of services, including (but not limited to) content ideation, social media management, app development!"],"contact":["if you'd like to keep in touch, feel free to contact us on facebook or at 473-0570!"]}
 
 
                 for item in split:
