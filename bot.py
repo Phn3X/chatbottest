@@ -47,16 +47,15 @@ def get_message():
         for message in messaging:
             if message.get('message'):
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
-                replies = {"hi":["hello! and welcome to bad rabbit! how can I help you?"],"services":["we offer a range of services, including (but not limited to) content ideation, social media management, app development!"],"contact":["if you'd like to keep in touch, feel free to contact us on facebook or at 473-0570!"]}
+                replies = {"hi":["hello! and welcome to bad rabbit! how can I help you?"],
+                "services":["we offer a range of services, including (but not limited to) content ideation, social media management, app development!"],
+                "contact":["if you'd like to keep in touch, feel free to contact us on facebook or at 473-0570!"]}
                 for item in split:
                     if item in replies:
                         reply_text=random.choice(replies[item])
                         print(split)
                         return(reply_text)
-                    elif item in replies1:
-                        reply_text1=random.choice(replies1[item])
-                        return(reply_text1)
-
+                    
 
 def send_message(recipient_id, response):
     bot.send_text_message(recipient_id, response)
