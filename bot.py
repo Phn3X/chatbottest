@@ -3,7 +3,7 @@ import re
 import time
 import facebook
 from flask import Flask, request
-from pymessenger.bot import bot
+from pymessenger.bot import Bot
 
 
 app= Flask(__name__)
