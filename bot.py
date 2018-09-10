@@ -49,7 +49,7 @@ def get_message():
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
                 replies = {"hi":["hello! and welcome to bad rabbit! how can I help you?"],
                 "services":["we offer a range of services, including (but not limited to) content ideation, social media management, app development!"],
-                "contact":["if you'd like to keep in touch, feel free to contact us on facebook or at 473-0570!"],"hello":["Hi! Please follow the link and fill out the following form! https://goo.gl/forms/9BtYs7EjM3CgFqxJ2"],"thank":["You're most welcome! We hope to hear from you again!"]}
+                "contact":["if you'd like to keep in touch, feel free to contact us on facebook or at 473-0570!"],"hello":["Hi! Please follow the link and fill out the following form! https://goo.gl/forms/9BtYs7EjM3CgFqxJ2"],"thank":["You're most welcome! We hope to hear from you again!"],"thanks":["You're most welcome! We hope to hear from you again!"]}
                 for item in split:
                     if item in replies:
                         reply_text=random.choice(replies[item])
