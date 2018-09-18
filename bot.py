@@ -48,10 +48,10 @@ def get_message():
             if message.get('message'):
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
                 replies = {"menu":["Hi! Thanks for getting in touch. Please click here to see our Menu: http://bit.ly/2r02sf0"]}
-                    if item in replies:
-                        reply_text=random.choice(replies[item])
-                        print(split)
-                        return(reply_text)
+                if item in replies:
+                    reply_text=random.choice(replies[item])
+                    print(split)
+                    return(reply_text)
 
 
 def send_message(recipient_id, response):
