@@ -47,7 +47,7 @@ def get_message():
         for message in messaging:
             if message.get('message'):
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
-                replies = {"menu":["Hi,Thanks for getting in touch. Please click here to see our Menu:http://bit.ly/2r02sf0"],"hours":["Hello (personalise with first name if possible), thanks for getting in touch! Our Kaizan Port-Of-Spain branch is located at Shop #15, MovieTowne, POS. For reservations or more information please give us a call at 623-5437 or 222-4441. \n Our Kaizan Chaguanas branch is located at Shop #12A North, Price Plaza. For reservations or more information please give us a call at 672-1815, 672-6601 or 221-8983. Our opening hours for this location are as follows: Sun - Thur 11.00am – 10.30pm Fri - Sat 11.00am – 11.00pm \n Kind regards, \n The Kaizan Team"]}
+                replies = {"menu":["Hi,Thanks for getting in touch. Please click here to see our Menu:http://bit.ly/2r02sf0"],"hours":["Hello (personalise with first name if possible), thanks for getting in touch! Our Kaizan Port-Of-Spain branch is located at Shop #15, MovieTowne, POS. For reservations or more information please give us a call at 623-5437 or 222-4441. \n \n  Our Kaizan Chaguanas branch is located at Shop #12A North, Price Plaza. For reservations or more information please give us a call at 672-1815, 672-6601 or 221-8983. Our opening hours for this location are as follows: Sun - Thur 11.00am – 10.30pm Fri - Sat 11.00am – 11.00pm \n \n Kind regards, \n The Kaizan Team"]}
                 for item in split:
                     if item in replies:
                         reply_text=random.choice(replies[item])
