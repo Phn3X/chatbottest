@@ -59,7 +59,7 @@ def get_message():
                 "reservation":["Hi,Thank you for your interest. \n \n Unfortunately we are not authorised to accept reservations on this platform. Please call our restaurants to make a reservation. \n \n Our Kaizan Port-Of-Spain branch is located at Shop #15, MovieTowne, POS. For reservations or more information please give us a call at 623-5437 or 222-4441. \n \n Our Kaizan Chaguanas branch is located at Shop #12A North, Price Plaza. For reservations or more information please give us a call at 672-1815, 672-6601 or 221-8983.\n \n Our opening hours for this location are as follows: \n Sun - Thur 11.00am – 10.30pm \n Fri - Sat 11.00am – 11.00pm"],
                 "shellfish":["Hello! We have lots of non-shellfish options. Please talk to your server about our menu and inform them if you have any food allergies. Thank you."],
                 "cooked":["Hi! We have lots of cooked options for you. Please look on our menu for the flame symbol 🔥 and that will indicate that the food item is cooked."],
-                "raw":["Hi! we have lots of cooked options for you. Please look on our menu for the flame symbol 🔥 and that will indicate that the food item is cooked."]0}
+                "raw":["Hi! we have lots of cooked options for you. Please look on our menu for the flame symbol 🔥 and that will indicate that the food item is cooked."]}
 
                 for item in split:
                     if item in replies:
