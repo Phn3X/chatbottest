@@ -67,8 +67,6 @@ def get_message():
                         print(split)
                         return(reply_text)
 
-time.sleep(30)
-
 def send_message(recipient_id, response):
     bot.send_text_message(recipient_id, response)
     return "success"
