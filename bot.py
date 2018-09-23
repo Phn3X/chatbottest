@@ -39,8 +39,6 @@ def verify_fb_token(token_sent):
         return request.args.get("hub.challenge")
     return 'Invalid verifcation token'
 
-time.sleep(10)
-
 def get_message():
 
     output = request.get_json()
@@ -73,6 +71,7 @@ def send_message(recipient_id, response):
     bot.send_text_message(recipient_id, response)
     return "success"
 
+time.sleep(30)
 
 if __name__ == "__main__":
     app.run()
