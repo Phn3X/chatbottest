@@ -64,6 +64,7 @@ def get_message():
                 for item in split:
                     if item in replies:
                         reply_text=random.choice(replies[item])
+                        print(split)
                         return(reply_text)
 
 
