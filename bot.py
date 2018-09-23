@@ -39,6 +39,8 @@ def verify_fb_token(token_sent):
         return request.args.get("hub.challenge")
     return 'Invalid verifcation token'
 
+time.sleep(10)
+
 def get_message():
 
     output = request.get_json()
