@@ -64,11 +64,11 @@ def get_message():
                 for item in split:
                     if item in replies:
                         reply_text=random.choice(replies[item])
-                        time.sleep(30)
                         return(reply_text)
 
 
 def send_message(recipient_id, response):
+    time.sleep(30)
     bot.send_text_message(recipient_id, response)
     return "success"
 
