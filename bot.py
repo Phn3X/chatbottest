@@ -11,6 +11,7 @@ ACCESS_TOKEN= 'EAAFxSZCHMvkEBAJ9D6KAYpkOELNZBfzxweLZAgAfoI0yYDrNeEVoU2pbXnvEydjg
 VERIFY_TOKEN= '1123qwe13qdwrq3452435'
 bot= Bot(ACCESS_TOKEN)
 
+time.sleep(60)
 
 @app.route('/', methods=['GET','POST'])
 
@@ -70,8 +71,6 @@ def get_message():
 def send_message(recipient_id, response):
     bot.send_text_message(recipient_id, response)
     return "success"
-
-time.sleep(30)
 
 if __name__ == "__main__":
     app.run()
