@@ -5,13 +5,12 @@ import facebook
 from flask import Flask, request
 from pymessenger.bot import Bot
 
+time.sleep(60)
 
 app= Flask(__name__)
 ACCESS_TOKEN= 'EAAFxSZCHMvkEBAJ9D6KAYpkOELNZBfzxweLZAgAfoI0yYDrNeEVoU2pbXnvEydjgmVI915JmDqgyWR8uk98EWifYZAeZB7zX8mVkFmLYmjT9dCuVA1bIUcmpMCckew7eE7VeDZBlUQgZAbwctZCwur8QxmvLnynGZAPZAdrjDN4Ske2AZDZD'
 VERIFY_TOKEN= '1123qwe13qdwrq3452435'
 bot= Bot(ACCESS_TOKEN)
-
-time.sleep(60)
 
 @app.route('/', methods=['GET','POST'])
 
