@@ -11,6 +11,7 @@ ACCESS_TOKEN= 'EAAFxSZCHMvkEBAJ9D6KAYpkOELNZBfzxweLZAgAfoI0yYDrNeEVoU2pbXnvEydjg
 VERIFY_TOKEN= '1123qwe13qdwrq3452435'
 bot= Bot(ACCESS_TOKEN)
 
+
 @app.route('/', methods=['GET','POST'])
 
 
@@ -33,6 +34,7 @@ def receive_message():
                         send_message(recipient_id, response_sent_nontext)
     return "Message Processed"
 
+time.sleep(10)
 
 def get_message():
 
