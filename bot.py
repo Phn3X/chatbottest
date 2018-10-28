@@ -5,7 +5,6 @@ import facebook
 from flask import Flask, request
 from pymessenger.bot import Bot
 
-time.sleep(10)
 
 app= Flask(__name__)
 ACCESS_TOKEN= 'EAAFxSZCHMvkEBAJ9D6KAYpkOELNZBfzxweLZAgAfoI0yYDrNeEVoU2pbXnvEydjgmVI915JmDqgyWR8uk98EWifYZAeZB7zX8mVkFmLYmjT9dCuVA1bIUcmpMCckew7eE7VeDZBlUQgZAbwctZCwur8QxmvLnynGZAPZAdrjDN4Ske2AZDZD'
@@ -34,10 +33,6 @@ def receive_message():
                         send_message(recipient_id, response_sent_nontext)
     return "Message Processed"
 
-def verify_fb_token(token_sent):
-    if token_sent == VERIFY_TOKEN:
-        return request.args.get("hub.challenge")
-    return 'Invalid verifcation token'
 
 def get_message():
 
