@@ -32,7 +32,6 @@ def receive_message():
                     if message['message'].get('attachments'):
                         response_sent_nontext = get_message()
                         send_message(recipient_id, response_sent_nontext)
-                        time.sleep(10)
     return "Message Processed"
 
 
