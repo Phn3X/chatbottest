@@ -43,7 +43,7 @@ def get_message():
         for message in messaging:
             if message.get('message'):
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
-                replies = {"toast":"receipe1.jpg"}
+                replies = {"toast":"recepie1.jpg"}
 
                 for item in split:
                     if item in replies:
