@@ -2,4 +2,4 @@ Flask==1.0.2
 gunicorn==19.9.0
 facebook-sdk==3.0.0
 pymessenger==0.0.7.0
-requests==2.19.1
+requests==2.20.0
