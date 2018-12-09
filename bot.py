@@ -7,8 +7,8 @@ from pymessenger.bot import Bot
 
 
 app= Flask(__name__)
-ACCESS_TOKEN= 'EAAFxSZCHMvkEBAJ9D6KAYpkOELNZBfzxweLZAgAfoI0yYDrNeEVoU2pbXnvEydjgmVI915JmDqgyWR8uk98EWifYZAeZB7zX8mVkFmLYmjT9dCuVA1bIUcmpMCckew7eE7VeDZBlUQgZAbwctZCwur8QxmvLnynGZAPZAdrjDN4Ske2AZDZD'
-VERIFY_TOKEN= '1123qwe13qdwrq3452435'
+ACCESS_TOKEN= 'EAAcWiYBil7cBAAUBRABtSQ4zhsgj2mmy1EaMHBTeKuZA9t68yScxnsZAglKxXZCCNRMKIJQMbTkmzZAr9xQN1Sc4LgwWtl6MamJulB2MVCb0ssGe2ZCWJNl4M1iL8avnrpCQ3n90VbImy64oiE4bfMQmGZCPCVU00jz319ymGpxgZDZD'
+VERIFY_TOKEN= '234q4qq545fqeq3'
 bot= Bot(ACCESS_TOKEN)
 
 
@@ -17,8 +17,10 @@ bot= Bot(ACCESS_TOKEN)
 
 def receive_message():
     if request.method == 'GET':
-        token_sent = request.args.get("hub.verify_token")
-        return verify_fb_token(token_sent)
+        if request.args.get("hub.verify_token") == VERIFY_TOKEN:
+            return request.args.get("hub.challenge")
+        else:
+            return("incorrect verifciation token")
     else:
         output = request.get_json()
         for event in output['entry']:
@@ -43,13 +45,14 @@ def get_message():
         for message in messaging:
             if message.get('message'):
                 split = re.sub(r"[^a-zA-Z0-9\s]",' ',message['message'].get('text')).lower().split()
-                replies = {"toast":"1.jpg"}
+                replies = {"toast":["hi! Here's a lovely pina collada toast recipe for you! \n https://bit.ly/2BZYc4j" ],"fish":["Hi! Here's a lovely fish recipe for you! \n https://goo.gl/eopxdP"],"soup":["Hi! Here's a tasty corn soup recipe just for you! \n https://goo.gl/S4FcsE"],"pork":["Hi! Here's a pork recipe that's sure to taste divine! \n https://goo.gl/uGU8UR"]}
 
                 for item in split:
                     if item in replies:
                         reply_text=random.choice(replies[item])
-                        print(split)
                         return(reply_text)
+
+
 
 def send_message(recipient_id, response):
     bot.send_text_message(recipient_id, response)
